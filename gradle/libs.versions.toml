@@ -1,0 +1,12 @@
+[versions]
+
+reposilite = "3.5.23"
+
+screaming-plugin-builder = "2.0.0-SNAPSHOT"
+kotlin = "2.1.20"
+
+[libraries]
+reposilite = { group = "com.reposilite", name = "reposilite", version.ref = "reposilite"}
+
+[plugins]
+screaming-plugin-builder = { id = "org.screamingsandals.plugin-builder", version.ref = "screaming-plugin-builder" }
