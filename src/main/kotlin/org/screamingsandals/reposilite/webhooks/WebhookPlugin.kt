@@ -72,12 +72,17 @@ class WebhookPlugin : ReposilitePlugin() {
                         }
 
                         buildMap {
-                            XmlParser()
-                                .parse(file.get())
-                                .get("properties")
+                            val parsed = XmlParser().parse(file.get())
+                            parsed.get("properties")
                                 ?.forEach { child ->
                                     if (child is XmlParser.Node) {
                                         put(child.tag, child.toString(false, true))
+                                    }
+                                }
+                            parsed.get("scm")
+                                ?.forEach { child ->
+                                    if (child is XmlParser.Node) {
+                                        put("scm." + child.tag, child.toString(false, true))
                                     }
                                 }
                         }
