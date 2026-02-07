@@ -2,7 +2,7 @@
 
 reposilite = "3.5.23"
 
-screaming-plugin-builder = "2.0.0-SNAPSHOT"
+screaming-plugin-builder = "2.0.0"
 kotlin = "2.1.20"
 
 [libraries]
